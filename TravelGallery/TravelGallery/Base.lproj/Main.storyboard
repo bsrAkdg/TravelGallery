@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="318.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="3aJ-Bt-Lap">
             <objects>
-                <viewController id="ajy-X2-URx" sceneMemberID="viewController">
+                <viewController id="ajy-X2-URx" customClass="SignUpVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="455-l8-Baa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +175,7 @@
         <!--New-->
         <scene sceneID="l5G-MI-Lvr">
             <objects>
-                <viewController id="Wft-3U-grd" sceneMemberID="viewController">
+                <viewController id="Wft-3U-grd" customClass="AddPhotoVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ER6-TM-Ncl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
         <!--Cities-->
         <scene sceneID="NTi-mT-EYp">
             <objects>
-                <viewController id="UmU-VO-f6z" sceneMemberID="viewController">
+                <viewController id="UmU-VO-f6z" customClass="CitiesVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZeE-bG-5By">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="3082.608695652174" y="-558.48214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Map ListVC-->
         <scene sceneID="dmk-hV-3hL">
             <objects>
-                <viewController id="Juc-iZ-Wou" sceneMemberID="viewController">
+                <viewController id="Juc-iZ-Wou" customClass="MapListVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="in5-x3-gLU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="3987" y="-558"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo DetailVC-->
         <scene sceneID="5lO-iW-DC2">
             <objects>
-                <viewController id="ilx-W9-wex" sceneMemberID="viewController">
+                <viewController id="ilx-W9-wex" customClass="PhotoDetailVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="USI-B3-rRc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="4903" y="-558"/>
         </scene>
-        <!--View Controller-->
+        <!--Map DetailVC-->
         <scene sceneID="dZU-wf-wMB">
             <objects>
-                <viewController id="zMX-5x-aUk" sceneMemberID="viewController">
+                <viewController id="zMX-5x-aUk" customClass="MapDetailVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hlT-aE-aqY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,10 +340,10 @@
             </objects>
             <point key="canvasLocation" x="5715.9420289855079" y="-558.48214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Detail ListVC-->
         <scene sceneID="ZAV-eu-qNQ">
             <objects>
-                <viewController id="cer-yA-cqt" sceneMemberID="viewController">
+                <viewController id="cer-yA-cqt" customClass="PhotoDetailListVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="go9-wN-2qP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +400,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="X3N-7K-60H">
             <objects>
-                <tabBarController id="lCn-0v-KF6" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="home" id="lCn-0v-KF6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bjp-ce-Tro"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uTx-Sv-DfH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -420,7 +420,7 @@
         <!--Profile-->
         <scene sceneID="ImE-Fh-nRo">
             <objects>
-                <viewController id="XCh-Lf-Mzt" sceneMemberID="viewController">
+                <viewController id="XCh-Lf-Mzt" customClass="ProfileVC" customModule="TravelGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tc0-B4-7iU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
