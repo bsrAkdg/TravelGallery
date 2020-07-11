@@ -15,29 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-By-eBd">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-By-eBd">
                                 <rect key="frame" x="39" y="304" width="337" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="pIH-sd-seC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2D-Yl-xI8">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2D-Yl-xI8">
                                 <rect key="frame" x="39" y="359" width="337" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="UTs-fw-a1f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3v-Ga-VOY">
                                 <rect key="frame" x="134" y="492" width="147" height="30"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nr1-OJ-qDI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTY-dh-ONE">
                                 <rect key="frame" x="134" y="433" width="147" height="30"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mU-C1-qbA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Travel Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jff-dt-OuN">
                                 <rect key="frame" x="39" y="233" width="337" height="52"/>
@@ -80,6 +86,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Exs-Vp-aYz"/>
                     <connections>
+                        <outlet property="emailOrUsername" destination="FbL-By-eBd" id="bwq-2D-kDu"/>
+                        <outlet property="password" destination="N2D-Yl-xI8" id="sqy-gG-EfO"/>
                         <segue destination="lCn-0v-KF6" kind="presentation" identifier="home" modalPresentationStyle="fullScreen" id="rel-T4-fay"/>
                         <segue destination="ajy-X2-URx" kind="presentation" identifier="register" modalPresentationStyle="fullScreen" id="AyS-o5-dbd"/>
                     </connections>
@@ -118,7 +126,7 @@
                                     <constraint firstAttribute="height" constant="34" id="p2f-JN-yoY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xc7-U9-WPE">
                                 <rect key="frame" x="134" y="526" width="147" height="30"/>
@@ -126,6 +134,9 @@
                                     <constraint firstAttribute="height" constant="30" id="T0V-pP-Ojt"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="ajy-X2-URx" eventType="touchUpInside" id="Bvj-a9-7IB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Travel Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V7-dL-VpH">
                                 <rect key="frame" x="39" y="233" width="337" height="52"/>
@@ -139,7 +150,7 @@
                                     <constraint firstAttribute="height" constant="34" id="oJ1-9L-uQj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -167,10 +178,17 @@
                         <viewLayoutGuide key="safeArea" id="9Y6-ii-wqJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="qwg-3t-6Ss"/>
+                    <connections>
+                        <outlet property="email" destination="PpG-7Y-Qq1" id="x53-Rf-7kG"/>
+                        <outlet property="password" destination="B4l-1f-3PI" id="vIh-hr-e5M"/>
+                        <outlet property="passwordAgain" destination="nnp-po-Ea5" id="WJC-yx-lWE"/>
+                        <outlet property="username" destination="nRc-fo-sD9" id="XfT-Dh-63V"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="IIN-EK-Qwo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cO-3b-C6p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="1050"/>
+            <point key="canvasLocation" x="1048" y="1065"/>
         </scene>
         <!--New-->
         <scene sceneID="l5G-MI-Lvr">
@@ -443,12 +461,18 @@
                                 <rect key="frame" x="147" y="415" width="120" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logOut:" destination="XCh-Lf-Mzt" eventType="touchUpInside" id="rZE-Me-kJ8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="prr-pt-X04"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="29D-mW-zGA"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="a9v-9i-Xq5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfQ-Bk-QWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -457,6 +481,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="h9Q-nh-q5Q"/>
+        <segue reference="IIN-EK-Qwo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="map" catalog="system" width="128" height="113"/>

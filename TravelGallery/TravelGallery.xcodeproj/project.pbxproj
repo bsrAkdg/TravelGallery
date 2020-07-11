@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA1F82E28643D7F26237D339 /* Pods_TravelGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6906BFBF888B8840B21735 /* Pods_TravelGallery.framework */; };
+		E830141324B9ECE60011ABFE /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141224B9ECE60011ABFE /* TextFieldExtension.swift */; };
 		E85B73EB24B2165300E3D5F4 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73EA24B2165300E3D5F4 /* SignInVC.swift */; };
 		E85B73ED24B2166300E3D5F4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73EC24B2166300E3D5F4 /* SignUpVC.swift */; };
 		E85B73F424B216C700E3D5F4 /* CitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73F324B216C700E3D5F4 /* CitiesVC.swift */; };
@@ -19,7 +20,6 @@
 		E85B740024B2185000E3D5F4 /* MapDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73FF24B2185000E3D5F4 /* MapDetailVC.swift */; };
 		E874B11224B0B0560058FF8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874B11124B0B0560058FF8B /* AppDelegate.swift */; };
 		E874B11424B0B0560058FF8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874B11324B0B0560058FF8B /* SceneDelegate.swift */; };
-		E874B11624B0B0560058FF8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874B11524B0B0560058FF8B /* ViewController.swift */; };
 		E874B11924B0B0560058FF8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E874B11724B0B0560058FF8B /* Main.storyboard */; };
 		E874B11C24B0B0560058FF8B /* TravelGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E874B11A24B0B0560058FF8B /* TravelGallery.xcdatamodeld */; };
 		E874B11E24B0B0590058FF8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E874B11D24B0B0590058FF8B /* Assets.xcassets */; };
@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		36E0871CA96A375D89C184FB /* Pods-TravelGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelGallery.debug.xcconfig"; path = "Target Support Files/Pods-TravelGallery/Pods-TravelGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		C4908DD8A03A3774BEBE466B /* Pods-TravelGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelGallery.release.xcconfig"; path = "Target Support Files/Pods-TravelGallery/Pods-TravelGallery.release.xcconfig"; sourceTree = "<group>"; };
+		E830141224B9ECE60011ABFE /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		E85B73EA24B2165300E3D5F4 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		E85B73EC24B2166300E3D5F4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E85B73F324B216C700E3D5F4 /* CitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesVC.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		E874B10E24B0B0560058FF8B /* TravelGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E874B11124B0B0560058FF8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E874B11324B0B0560058FF8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E874B11524B0B0560058FF8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E874B11824B0B0560058FF8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E874B11B24B0B0560058FF8B /* TravelGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelGallery.xcdatamodel; sourceTree = "<group>"; };
 		E874B11D24B0B0590058FF8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +79,14 @@
 				EA6906BFBF888B8840B21735 /* Pods_TravelGallery.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E830140D24B729120011ABFE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E830141224B9ECE60011ABFE /* TextFieldExtension.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		E85B73E924B2163100E3D5F4 /* viewController */ = {
@@ -167,10 +175,10 @@
 		E874B11024B0B0560058FF8B /* TravelGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E830140D24B729120011ABFE /* utils */,
 				E85B740124B21D3C00E3D5F4 /* delegate */,
 				E85B73E924B2163100E3D5F4 /* viewController */,
 				E874B12824B0B26D0058FF8B /* GoogleService-Info.plist */,
-				E874B11524B0B0560058FF8B /* ViewController.swift */,
 				E874B11724B0B0560058FF8B /* Main.storyboard */,
 				E874B11D24B0B0590058FF8B /* Assets.xcassets */,
 				E874B11F24B0B0590058FF8B /* LaunchScreen.storyboard */,
@@ -299,13 +307,13 @@
 				E85B73FE24B2180B00E3D5F4 /* PhotoDetailVC.swift in Sources */,
 				E874B11C24B0B0560058FF8B /* TravelGallery.xcdatamodeld in Sources */,
 				E85B73F424B216C700E3D5F4 /* CitiesVC.swift in Sources */,
-				E874B11624B0B0560058FF8B /* ViewController.swift in Sources */,
 				E874B11224B0B0560058FF8B /* AppDelegate.swift in Sources */,
 				E874B11424B0B0560058FF8B /* SceneDelegate.swift in Sources */,
 				E85B73F624B216F500E3D5F4 /* MapListVC.swift in Sources */,
 				E85B73F824B2175900E3D5F4 /* PhotoDetailListVC.swift in Sources */,
 				E85B740024B2185000E3D5F4 /* MapDetailVC.swift in Sources */,
 				E85B73ED24B2166300E3D5F4 /* SignUpVC.swift in Sources */,
+				E830141324B9ECE60011ABFE /* TextFieldExtension.swift in Sources */,
 				E85B73EB24B2165300E3D5F4 /* SignInVC.swift in Sources */,
 				E85B73FC24B217C100E3D5F4 /* ProfileVC.swift in Sources */,
 				E85B73FA24B217AE00E3D5F4 /* AddPhotoVC.swift in Sources */,
