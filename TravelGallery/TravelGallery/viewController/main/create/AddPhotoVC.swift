@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import MapKit
 
 class AddPhotoVC: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var imageDescription: UITextView!
+    
+    @IBOutlet weak var city: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
