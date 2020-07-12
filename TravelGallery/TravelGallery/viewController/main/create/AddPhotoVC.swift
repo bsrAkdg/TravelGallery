@@ -10,8 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 import CoreData
+import Firebase
+import FirebaseFirestore
 
-class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var imageView: UIImageView!
@@ -27,6 +29,7 @@ class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 
         setNavigation()
         setLocation()
+        setImageActions()
         // Do any additional setup after loading the view.
     }
     
@@ -52,6 +55,13 @@ class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         let longGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))
         longGestureRecognizer.minimumPressDuration = 3
         mapView.addGestureRecognizer(longGestureRecognizer)
+    }
+    
+    func setImageActions() {
+        // open gallery when clicked imageview
+        imageView.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openGallery))
+        imageView.addGestureRecognizer(gestureRecognizer)
     }
     
     // updated location
@@ -103,6 +113,19 @@ class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
             mapView.addAnnotation(annotation)
             
         }
+    }
+    
+    @objc func openGallery() {
+        let galleryPickerView = UIImagePickerController()
+        galleryPickerView.delegate = self
+        galleryPickerView.sourceType = .photoLibrary
+        self.present(galleryPickerView, animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageView.image = info[.originalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func saveImage() {
