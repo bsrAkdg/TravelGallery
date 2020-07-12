@@ -63,11 +63,4 @@ class SignUpVC : UIViewController {
             showAlert(title: "Error", message: "Please enter a email")
         }
     }
-    
-    func showAlert(title: String, message: String) {
-         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-         let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-         alert.addAction(action)
-         self.present(alert, animated: true, completion: nil)
-     }
 }

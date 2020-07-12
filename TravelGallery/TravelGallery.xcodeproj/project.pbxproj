@@ -11,6 +11,7 @@
 		E830141324B9ECE60011ABFE /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141224B9ECE60011ABFE /* TextFieldExtension.swift */; };
 		E830141724BB2A570011ABFE /* PhotoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141624BB2A570011ABFE /* PhotoDetail.swift */; };
 		E830141924BB2A7E0011ABFE /* MapDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141824BB2A7E0011ABFE /* MapDetail.swift */; };
+		E830141B24BB7F5B0011ABFE /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141A24BB7F5B0011ABFE /* ViewControllerExtension.swift */; };
 		E85B73EB24B2165300E3D5F4 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73EA24B2165300E3D5F4 /* SignInVC.swift */; };
 		E85B73ED24B2166300E3D5F4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73EC24B2166300E3D5F4 /* SignUpVC.swift */; };
 		E85B73F424B216C700E3D5F4 /* CitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73F324B216C700E3D5F4 /* CitiesVC.swift */; };
@@ -35,6 +36,7 @@
 		E830141224B9ECE60011ABFE /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		E830141624BB2A570011ABFE /* PhotoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetail.swift; sourceTree = "<group>"; };
 		E830141824BB2A7E0011ABFE /* MapDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetail.swift; sourceTree = "<group>"; };
+		E830141A24BB7F5B0011ABFE /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		E85B73EA24B2165300E3D5F4 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		E85B73EC24B2166300E3D5F4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E85B73F324B216C700E3D5F4 /* CitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesVC.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				E830141224B9ECE60011ABFE /* TextFieldExtension.swift */,
+				E830141A24BB7F5B0011ABFE /* ViewControllerExtension.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				E874B11C24B0B0560058FF8B /* TravelGallery.xcdatamodeld in Sources */,
 				E85B73F424B216C700E3D5F4 /* CitiesVC.swift in Sources */,
 				E874B11224B0B0560058FF8B /* AppDelegate.swift in Sources */,
+				E830141B24BB7F5B0011ABFE /* ViewControllerExtension.swift in Sources */,
 				E874B11424B0B0560058FF8B /* SceneDelegate.swift in Sources */,
 				E85B73F624B216F500E3D5F4 /* MapListVC.swift in Sources */,
 				E85B73F824B2175900E3D5F4 /* PhotoDetailListVC.swift in Sources */,

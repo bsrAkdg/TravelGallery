@@ -13,7 +13,8 @@ import CoreData
 import Firebase
 import FirebaseFirestore
 
-class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var imageView: UIImageView!
@@ -23,6 +24,10 @@ class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     var locationManager = CLLocationManager()
     var choosenLatitude = Double()
     var choosenLongitude = Double()
+    var hasImage = false
+    var cities = [String]()
+
+    let fireStoreDatabase = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,7 @@ class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         setNavigation()
         setLocation()
         setImageActions()
+        setCities()
         // Do any additional setup after loading the view.
     }
     
@@ -53,7 +59,7 @@ class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         
         // add gesture recognizer for location selection
         let longGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))
-        longGestureRecognizer.minimumPressDuration = 3
+        longGestureRecognizer.minimumPressDuration = 1
         mapView.addGestureRecognizer(longGestureRecognizer)
     }
     
@@ -122,10 +128,63 @@ class AddPhotoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         self.present(galleryPickerView, animated: true, completion: nil)
     }
     
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        hasImage = true
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setCities() {
+        fireStoreDatabase.collection("Cities").addSnapshotListener { (snapShot, error) in
+            if error == nil && snapShot != nil && snapShot?.isEmpty == false {
+                self.cities.removeAll()
+                self.cities.append("Add New City")
+                for cityDocument in snapShot!.documents {
+                    if let cityName = cityDocument.get("cityName") as? String{
+                        self.cities.append(cityName)
+                    }
+                }
+            } else {
+                self.cities.append("Add New City")
+            }
+        }
+    }
+    
+    func showCityPickerView() {
+        let cityPicker = UIPickerView()
+        cityPicker.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cityPicker)
+
+        cityPicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        cityPicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        cityPicker.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return cities.count
+    }
+      
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 1
+    }
+      
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return cities[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row == 0 {
+            // show edit dialog and insert firebase
+            showEditableAlertDialog(title: "Add new city", message: "Please add new city", placeHolder: "City name", buttonTitle: "Save") { (cityName) in
+                if cityName == "" {
+                    self.showAlert(title: "Error", message: "Please enter a city name")
+                } else {
+                    self.city.text = cityName
+                }
+            }
+        } else {
+            city.text = cities[row]
+        }
     }
     
     @objc func saveImage() {

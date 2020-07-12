@@ -230,13 +230,13 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emz-ZV-huG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emz-ZV-huG">
                                                 <rect key="frame" x="8" y="1212" width="382" height="58"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="ilt-7S-BKL"/>
                                                     <constraint firstAttribute="width" constant="382" id="sQv-ed-xn6"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -280,7 +280,7 @@
                     <navigationItem key="navigationItem" id="EmQ-4r-Vb5"/>
                     <size key="freeformSize" width="414" height="1290"/>
                     <connections>
-                        <outlet property="city" destination="Emz-ZV-huG" id="grL-6a-lfz"/>
+                        <outlet property="city" destination="Emz-ZV-huG" id="ELB-9n-akg"/>
                         <outlet property="imageDescription" destination="BG8-WQ-mpV" id="gdD-hH-biV"/>
                         <outlet property="imageView" destination="hel-Yz-CEs" id="7vF-aX-8kV"/>
                         <outlet property="mapView" destination="uQE-ea-YGe" id="qHb-FC-2l4"/>
