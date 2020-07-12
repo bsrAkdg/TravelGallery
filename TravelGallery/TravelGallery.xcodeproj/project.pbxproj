@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA1F82E28643D7F26237D339 /* Pods_TravelGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6906BFBF888B8840B21735 /* Pods_TravelGallery.framework */; };
 		E830141324B9ECE60011ABFE /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141224B9ECE60011ABFE /* TextFieldExtension.swift */; };
+		E830141724BB2A570011ABFE /* PhotoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141624BB2A570011ABFE /* PhotoDetail.swift */; };
+		E830141924BB2A7E0011ABFE /* MapDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830141824BB2A7E0011ABFE /* MapDetail.swift */; };
 		E85B73EB24B2165300E3D5F4 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73EA24B2165300E3D5F4 /* SignInVC.swift */; };
 		E85B73ED24B2166300E3D5F4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73EC24B2166300E3D5F4 /* SignUpVC.swift */; };
 		E85B73F424B216C700E3D5F4 /* CitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B73F324B216C700E3D5F4 /* CitiesVC.swift */; };
@@ -31,6 +33,8 @@
 		36E0871CA96A375D89C184FB /* Pods-TravelGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelGallery.debug.xcconfig"; path = "Target Support Files/Pods-TravelGallery/Pods-TravelGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		C4908DD8A03A3774BEBE466B /* Pods-TravelGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelGallery.release.xcconfig"; path = "Target Support Files/Pods-TravelGallery/Pods-TravelGallery.release.xcconfig"; sourceTree = "<group>"; };
 		E830141224B9ECE60011ABFE /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		E830141624BB2A570011ABFE /* PhotoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetail.swift; sourceTree = "<group>"; };
+		E830141824BB2A7E0011ABFE /* MapDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetail.swift; sourceTree = "<group>"; };
 		E85B73EA24B2165300E3D5F4 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		E85B73EC24B2166300E3D5F4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E85B73F324B216C700E3D5F4 /* CitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesVC.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 				E830141224B9ECE60011ABFE /* TextFieldExtension.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		E830141424BB2A3A0011ABFE /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E830141624BB2A570011ABFE /* PhotoDetail.swift */,
+				E830141824BB2A7E0011ABFE /* MapDetail.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		E85B73E924B2163100E3D5F4 /* viewController */ = {
@@ -175,6 +188,7 @@
 		E874B11024B0B0560058FF8B /* TravelGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E830141424BB2A3A0011ABFE /* models */,
 				E830140D24B729120011ABFE /* utils */,
 				E85B740124B21D3C00E3D5F4 /* delegate */,
 				E85B73E924B2163100E3D5F4 /* viewController */,
@@ -313,6 +327,8 @@
 				E85B73F824B2175900E3D5F4 /* PhotoDetailListVC.swift in Sources */,
 				E85B740024B2185000E3D5F4 /* MapDetailVC.swift in Sources */,
 				E85B73ED24B2166300E3D5F4 /* SignUpVC.swift in Sources */,
+				E830141924BB2A7E0011ABFE /* MapDetail.swift in Sources */,
+				E830141724BB2A570011ABFE /* PhotoDetail.swift in Sources */,
 				E830141324B9ECE60011ABFE /* TextFieldExtension.swift in Sources */,
 				E85B73EB24B2165300E3D5F4 /* SignInVC.swift in Sources */,
 				E85B73FC24B217C100E3D5F4 /* ProfileVC.swift in Sources */,
